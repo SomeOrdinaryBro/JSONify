@@ -46,4 +46,4 @@ For design changes, update the styles in this file and refresh the application t
 
 Thank you for reviewing the `styles.css` file!
 
-[Go Back to Documentation Index](doc.md)
+[Go Back to Documentation Index](doc.html)

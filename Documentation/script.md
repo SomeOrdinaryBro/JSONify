@@ -27,4 +27,4 @@ For any functional changes, update the code in this file. Ensure to test the JSO
 
 Thank you for reviewing the `scripts.js` file!
 
-[Go Back to Documentation Index](doc.md)
+[Go Back to Documentation Index](doc.html)
