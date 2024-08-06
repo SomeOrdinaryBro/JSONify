@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html Documentation</title>
+</head>
+<body>
+    <div class="container">
+        <h1>index.html</h1>
+        <p>The <code>index.html</code> file serves as the core structure of the JSONify application. It defines the HTML markup for the user interface and links to external CSS and JavaScript files.</p>
+
+        <h2>Overview</h2>
+        <p>This file includes:</p>
+        <ul>
+            <li>The basic HTML5 structure</li>
+            <li>A <code>&lt;textarea&gt;</code> for users to input JSON data</li>
+            <li>A <code>&lt;button&gt;</code> to trigger JSON formatting</li>
+            <li>A <code>&lt;pre&gt;</code> element to display the formatted JSON</li>
+        </ul>
+
+        <h2>Key Sections</h2>
+        <h3>HTML Head</h3>
+        <ul>
+            <li><strong>Charset and Viewport</strong>: Ensures proper encoding and responsiveness on various devices.</li>
+            <li><strong>Title</strong>: Sets the title of the web page to "JSONify".</li>
+            <li><strong>Link to CSS</strong>: Includes <code>styles.css</code> to style the application.</li>
+        </ul>
+        <h3>HTML Body</h3>
+        <ul>
+            <li><strong>Container</strong>: A <code>&lt;div&gt;</code> element with the class <code>container</code> that holds the main content.</li>
+            <li><strong>Textarea</strong>: An input area with the id <code>jsonInput</code> where users paste their JSON data.</li>
+            <li><strong>Button</strong>: A button with an <code>onclick</code> event that triggers the <code>formatJson</code> function from <code>scripts.js</code>.</li>
+            <li><strong>Preformatted Text</strong>: A <code>&lt;pre&gt;</code> element with the id <code>formattedJson</code> where the formatted JSON is displayed.</li>
+        </ul>
+
+        <h2>Usage</h2>
+        <p>This file should be placed in the root directory of your project. It will be automatically loaded when users visit your JSONify application.</p>
+        <p>For any updates or modifications to the structure, make changes directly in this file and ensure proper testing.</p>
+
+        <footer>
+            <p>Thank you for reviewing the <code>index.html</code> file!</p>
+            <p><a href="doc.html">Go Back to Documentation Index</a></p>
+        </footer>
+    </div>
+</body>
+</html>
