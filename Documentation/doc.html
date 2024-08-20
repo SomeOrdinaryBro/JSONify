@@ -3,25 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSONify Documentation</title>
+    <title>JSON Formatter Documentation</title>
 </head>
 <body>
-    <div class="container">
-        <h1>JSONify Documentation</h1>
-        <p>Welcome to the JSONify documentation! This project is designed to format JSON data into a more readable format. Below are links to the documentation for the various components of the project:</p>
+    <h1>JSON Formatter Script Documentation</h1>
 
-        <h2>Documentation Links</h2>
+    <section>
+        <h2>Overview</h2>
+        <p>
+            The JSON Formatter script is a JavaScript function designed to format JSON strings into a readable format with proper indentation. This tool is useful for developers and users who need to quickly view and format JSON data for better readability.
+        </p>
+    </section>
+
+    <section>
+        <h2>Function: <code>formatJson</code></h2>
+        <pre>
+<code>
+function formatJson() {
+    const jsonInput = document.getElementById('jsonInput').value;
+    const outputElement = document.getElementById('formattedJson');
+    
+    try {
+        // Parse JSON and format it
+        const jsonData = JSON.parse(jsonInput);
+        const formattedJson = JSON.stringify(jsonData, null, 2);
+        outputElement.textContent = formattedJson;
+    } catch (e) {
+        // Handle JSON parse errors
+        outputElement.textContent = 'Invalid JSON';
+    }
+}
+</code>
+        </pre>
+
+        <h3>Explanation:</h3>
         <ul>
-            <li><a href="index_doc.html">index.html</a>
-                <p>This file contains the HTML structure for the JSONify application. It defines the layout and links to the CSS and JavaScript files used in the project.</p>
+            <li>
+                <strong>Getting the JSON Input:</strong>
+                <p>
+                    The <code>jsonInput</code> variable retrieves the JSON string from the HTML element with the ID <code>jsonInput</code>. This is typically a <code>&lt;textarea&gt;</code> or <code>&lt;input&gt;</code> where users can paste or type their JSON data.
+                </p>
             </li>
-            <li><a href="styles.md">styles.css</a>
-                <p>This file contains the styling rules for the JSONify application. It includes the CSS styles that define the visual appearance of the user interface elements.</p>
+            <li>
+                <strong>Selecting the Output Element:</strong>
+                <p>
+                    The <code>outputElement</code> variable refers to the HTML element with the ID <code>formattedJson</code>, where the formatted JSON will be displayed.
+                </p>
             </li>
-            <li><a href="scripts.md">scripts.js</a>
-                <p>This file includes the JavaScript code that handles the functionality for formatting JSON data. It contains the <code>formatJson</code> function that processes and formats JSON input.</p>
+            <li>
+                <strong>Parsing and Formatting:</strong>
+                <p>
+                    The function attempts to parse the JSON string using <code>JSON.parse</code>. If successful, it formats the JSON with indentation (2 spaces) using <code>JSON.stringify</code>.
+                </p>
+            </li>
+            <li>
+                <strong>Error Handling:</strong>
+                <p>
+                    If the input is not valid JSON, the error is caught by the <code>catch</code> block, and <code>'Invalid JSON'</code> is displayed.
+                </p>
+            </li>
+            <li>
+                <strong>Displaying the Result:</strong>
+                <p>
+                    The formatted JSON or error message is displayed in the <code>outputElement</code> by setting its <code>textContent</code>.
+                </p>
             </li>
         </ul>
-    </div>
+    </section>
+
+    <section>
+        <h2>Usage in HTML</h2>
+        <p>
+            To use the <code>formatJson</code> function in your HTML page, include the following HTML structure along with the JavaScript function:
+        </p>
+        <pre>
+<code>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter</title>
+    <script>
+        // The JSON Formatter function
+        function formatJson() {
+            const jsonInput = document.getElementById('jsonInput').value;
+            const outputElement = document.getElementById('formattedJson');
+            
+            try {
+                // Parse JSON and format it
+                const jsonData = JSON.parse(jsonInput);
+                const formattedJson = JSON.stringify(jsonData, null, 2);
+                outputElement.textContent = formattedJson;
+            } catch (e) {
+                // Handle JSON parse errors
+                outputElement.textContent = 'Invalid JSON';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>JSON Formatter</h1>
+    <textarea id="jsonInput" rows="10" cols="50" placeholder="Paste your JSON here"></textarea><br>
+    <button onclick="formatJson()">Format JSON</button>
+    <pre id="formattedJson"></pre>
+</body>
+</html>
+</code>
+        </pre>
+        <p>
+            This HTML structure includes a <code>&lt;textarea&gt;</code> for inputting JSON data, a <code>&lt;button&gt;</code> to trigger the formatting function, and a <code>&lt;pre&gt;</code> element to display the formatted JSON.
+        </p>
+    </section>
 </body>
 </html>
