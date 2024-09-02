@@ -23,12 +23,12 @@ To contribute or modify this project:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/JSONify_Codes.git
+    git clone https://github.com/yourusername/JSONify.git
     ```
 
 2. **Navigate to the Project Directory**:
     ```bash
-    cd JSONify_Codes
+    cd JSONify
     ```
 
 3. **Make Changes**: Edit the files as needed.
